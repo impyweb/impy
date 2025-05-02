@@ -1,3 +1,3 @@
 import os
 
-os.startfile(r"C:\Users\koke_\Documents\impy\index.html")
+os.startfile(r"C:\Users\impyw\OneDrive\Desktop\plataforma\sitios\curso\index.html")
