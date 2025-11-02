@@ -1,0 +1,18 @@
+# Python
+*.pyc
+__pycache__/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Archivos generados o temporales
+*.log
+*.tmp
+*.swp
+
+#ejecutor
+ejecutor.py

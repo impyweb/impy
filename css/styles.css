@@ -1,0 +1,480 @@
+/* ==============================
+   RESET / BASE
+============================== */
+
+/* Estilos globales */
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;  /* Ahora 'Poppins' es la fuente principal */
+  background-color: #F9FAFB
+}
+
+/* ==============================
+   TIPOGRAFÍA GLOBAL
+============================== */
+
+h1 {
+    text-align: center;
+    margin-top: 3.125rem; /* 50px → 3.125rem */
+    color: #4a148c;
+    font-size: 2rem; /* 32px → 2rem */
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #3c5f8b;
+    text-align: center;
+    margin-top: 1.875rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1.875rem;
+}
+
+.parrafo1{
+  font-size: 1rem;               /* Tamaño legible en pantallas modernas */
+  color: #374151;                /* Gris oscuro para buena legibilidad */
+  line-height: 1.6;              /* Espaciado entre líneas cómodo */
+  max-width: 800px;              /* Limita el ancho del texto para lectura óptima */
+  margin: 0 auto 40px auto;      /* Centrado horizontal + separación inferior */
+  text-align: justify;           /* Texto justificado, más formal */
+  padding: 0 20px;               /* Espacio lateral para móviles */
+  min-height: 80px;
+}
+
+.video-centrado {
+  display: block;        /* permite usar margin auto */
+  margin: 0 auto;        /* centra horizontalmente */
+  width: 100%;           /* ocupa todo el ancho disponible */
+  max-width: 560px;      /* evita que se agrande demasiado */
+  height: auto;          /* mantiene proporciones */
+  border-radius: 10px;   /* bordes suaves */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* sombra ligera */
+}
+
+p{
+  font-size: 1rem;               /* Tamaño legible en pantallas modernas */
+  color: #374151;                /* Gris oscuro para buena legibilidad */
+  line-height: 1.6;              /* Espaciado entre líneas cómodo */
+  max-width: 800px;              /* Limita el ancho del texto para lectura óptima */
+  margin: 0 auto 40px auto;      /* Centrado horizontal + separación inferior */
+  text-align: justify;           /* Texto justificado, más formal */
+  padding: 0 20px;               /* Espacio lateral para móviles */
+  min-height: 80px;
+}
+
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #F9FAFB;
+  margin: 40px 0;
+}
+
+.imagen-modificada {
+    width: 97%;
+    max-width: 83.75rem; /* 1500px */
+    height: auto;
+    border-radius: 0.625rem; /* 10px */
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1); /* 4px 10px */
+    transition: transform 0.3s ease-in-out;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.imagen-modificada:hover {
+    transform: scale(1.05);
+}
+
+/* ==============================
+   PLANES DE PROGRAMACIÓN
+============================== */
+
+.planes-programacion {
+  background-color: #f3e5f5; /* suave tono lila para diferenciar la sección */
+  padding: 3rem 1rem;
+  text-align: center;
+  border-top: 2px solid #e1bee7;
+  border-bottom: 2px solid #e1bee7;
+}
+
+.planes-programacion h2 {
+  color: #4a148c;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plan {
+  background-color: #fff;
+  padding: 1.5rem;
+  width: 300px;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.plan h3 {
+  font-size: 1.5rem;
+  color: #4a148c;
+  margin-bottom: 0.5rem;
+}
+
+.plan .price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.plan .classes {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.plan .description {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.75rem;
+  text-align: justify;
+  line-height: 1.5;
+  min-height: 120px;
+}
+
+.plan button {
+  background-color: #9c27b0;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  margin-top: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.plan button:hover {
+  background-color: #8e24aa;
+}
+
+/* Adaptable a móviles */
+@media (max-width: 900px) {
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .plan {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+/* ==============================
+   HEADER
+============================== */
+
+header {
+    background: linear-gradient(135deg, #6a1b9a, #9c27b0);
+    padding: 0.25rem 0; /* 20px → 1.25rem */
+    text-align: center;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px 8px → 0.25rem 0.5rem */
+    border-bottom: 0.1875rem solid #ab47bc; /* 3px → 0.1875rem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+  width: 90%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 160px;
+}
+
+.menu a {
+  color: #F9FAFB;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #A5B4FC; 
+}
+
+.home-icon {
+  width: 24px;   /* ajusta el tamaño según necesites */
+  height: 24px;
+  vertical-align: middle;
+  transition: opacity 0.3s ease;
+}
+
+.home-icon:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.separador {
+  color: #7022a0; /* igual al fondo */
+  user-select: none; /* para que no se seleccione al arrastrar texto */
+}
+
+/* ==============================
+   SUBMENÚS DESPLEGABLES
+============================== */
+
+/* Contenedor del submenú */
+.submenu-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Enlace principal del submenú (Programación, Guitarra, Piano) */
+.submenu-title {
+  color: #F9FAFB;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Color al pasar el mouse sobre el título principal */
+.submenu-container:hover .submenu-title {
+  color: #A5B4FC;
+}
+
+/* Submenú oculto inicialmente */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(135deg, #7b1fa2, #9c27b0);
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  min-width: 180px;
+  padding: 8px 0;
+  z-index: 1000;
+}
+
+/* Mostrar el submenú al pasar el mouse */
+.submenu-container:hover .submenu {
+  display: block;
+  animation: fadeInSubmenu 0.25s ease-out;
+}
+
+/* Enlaces dentro del submenú */
+.submenu a {
+  display: block;
+  color: #F9FAFB;
+  text-decoration: none;
+  padding: 10px 16px;
+  font-size: 15px;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Hover en cada enlace del submenú */
+.submenu a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #E0E7FF;
+}
+
+/* Pequeña animación de aparición */
+@keyframes fadeInSubmenu {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================
+   MAIN
+============================== */
+
+main {
+  background-color: #F9FAFB;
+  min-height: 400px;
+  padding-top: 40px; 
+}
+
+/* ==============================
+   CARRUSEL
+============================== */
+
+.carrusel {
+  position: relative;
+  aspect-ratio: 16 / 9;         /* Mantiene proporción fija */
+  max-width: 800px;             /* Tamaño máximo */
+  margin: 0 auto 60px auto;     /* Centrado */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #1F2937;    /* Fondo del marco (visible si sobra espacio) */
+}
+
+.carrusel-contenedor {
+  display: flex;
+  width: 100%;
+  height: 100%;                 /* ← fuerza a ocupar todo el marco */
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+
+.carrusel-item {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;                   /* invisible por defecto */
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* ✅ transición suave */
+  position: absolute;           /* todas se apilan una sobre otra */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.carrusel-item.activo {
+  opacity: 1;                   /* visible */
+  visibility: visible;
+  position: relative;           /* solo la activa ocupa el flujo normal */
+}
+
+.carrusel img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  background-color: #1F2937;
+  transition: transform 0.3s ease-in-out; /* ← agrega esta línea */
+}
+
+.carrusel img:hover {
+  transform: scale(1.05); /* ← agranda un poco la imagen */
+}
+
+.carrusel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(31,41,55,0.7);
+  color: #F9FAFB;
+  border: none;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  z-index: 10; 
+}
+
+.carrusel-btn:hover {
+  background-color: rgba(165,180,252,0.8);
+}
+
+.carrusel-btn.prev {
+  left: 15px;
+}
+
+.carrusel-btn.next {
+  right: 15px;
+}
+
+.carrusel-texto {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #F9FAFB;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  background: rgba(31,41,55,0.4);
+  padding: 10px 0;
+  border-radius: 0 0 10px 10px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+  background: linear-gradient(135deg, #6a1b9a, #9c27b0);
+  color: #F9FAFB;
+  padding: 4px 0 1px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-nav {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 4px
+}
+
+.footer-links a {
+  color: #F9FAFB;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #A5B4FC;
+}
+
+.footer-copy {
+  font-size: 12px;
+  color: #D1D5DB;
+  margin: 0;
+  margin-top: 4px
+}
