@@ -62,7 +62,6 @@ p{
   min-height: 80px;
 }
 
-
 hr {
   border: none;
   height: 1px;
@@ -81,11 +80,36 @@ hr {
     object-fit: cover;
     display: block;
     margin: 0 auto;
-
 }
 
 .imagen-modificada:hover {
     transform: scale(1.05);
+}
+
+/* ==============================
+   Botones
+============================== */
+
+a button {
+    display: block;
+    margin: 0 auto; 
+    background-color: #4a148c;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+a button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+a {
+    text-decoration: none;
 }
 
 /* ==============================
@@ -329,6 +353,48 @@ main {
   padding-top: 40px; 
 }
 
+.curso-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.curso-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.curso-section h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.presentacion-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iframe-wrapper {
+  width: 100%;
+  max-width: 600px;  
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  background: #000;
+  margin: 0 auto; /* centrado horizontal */
+}
+
+
+.iframe-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* ==============================
    CARRUSEL
 ============================== */
@@ -429,6 +495,141 @@ main {
 }
 
 /* ==============================
+   PREGUNTAS Y RESPUESTAS (FAQ)
+============================== */
+
+.faq-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.faq-section h2 {
+    color: #4a148c; /* Morado de tu H1 */
+    border-bottom: 2px solid #3c5f8b;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Importante para el acordeón */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 18px 25px;
+    text-align: left;
+    background-color: #f0f4f8; /* Gris azulado claro */
+    color: #3c5f8b; /* Azul de tu H2 */
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    /* Flecha del acordeón */
+    padding-right: 50px;
+}
+
+.faq-question:hover {
+    background-color: #e0e6ec;
+}
+
+/* Indicador de flecha para el acordeón */
+.faq-question::after {
+    content: '▼';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s;
+    font-size: 0.8rem;
+    color: #4a148c;
+}
+
+.faq-question.active {
+    background-color: #4a148c; /* Morado al estar activo */
+    color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question.active::after {
+    content: '▲';
+    transform: translateY(-50%) rotate(0deg);
+    color: #fff;
+}
+
+.faq-answer {
+    padding: 0 25px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-answer.open {
+    max-height: 500px; /* Suficientemente grande para contener la respuesta */
+    padding: 15px 25px;
+}
+
+.faq-answer p {
+    margin: 0 0 10px 0; /* Ajusta el margen del párrafo dentro de la respuesta */
+    text-align: left; /* Alineación del texto para la respuesta */
+    max-width: none; /* Ignora el max-width del p global */
+    padding: 0; /* Ignora el padding del p global */
+}
+
+/* ==============================
+   PROTOTIPOS — Alturas por modelo
+============================== */
+
+.prototipo-iframe {
+  width: 100%;
+  border: none;
+  margin: 40px 0;
+}
+
+/* Alturas personalizadas para cada prototipo */
+.alto-600  { min-height: 600px; }
+.alto-800  { min-height: 800px; }
+.alto-1000 { min-height: 1000px; }
+.alto-1200 { min-height: 1200px; }
+.alto-1400 { min-height: 1400px; }
+.alto-1600 { min-height: 1600px; }
+.alto-1800 { min-height: 1800px; }
+.alto-2000 { min-height: 2000px; }
+
+@media (max-width: 1024px) {
+  .prototipo-iframe {
+    min-height: 1200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prototipo-iframe {
+    min-height: 800px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prototipo-iframe {
+    min-height: 600px;
+  }
+}
+
+/* ==============================
    FOOTER
 ============================== */
 
@@ -478,3 +679,43 @@ footer {
   margin: 0;
   margin-top: 4px
 }
+
+/* ==============================
+   RESET / BASE
+============================== */
+
+/* ==============================
+   TIPOGRAFÍA GLOBAL
+============================== */
+
+/* ==============================
+   Botones
+============================== */
+
+/* ==============================
+   PLANES DE PROGRAMACIÓN
+============================== */
+
+/* ==============================
+   HEADER
+============================== */
+
+/* ==============================
+   SUBMENÚS DESPLEGABLES
+============================== */
+
+/* ==============================
+   MAIN
+============================== */
+
+/* ==============================
+   CARRUSEL
+============================== */
+
+/* ==============================
+   PREGUNTAS Y RESPUESTAS (FAQ)
+============================== */
+
+/* ==============================
+   FOOTER
+============================== */

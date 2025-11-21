@@ -1,0 +1,78 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #111; /* fondo general oscuro */
+    color: #fff;
+}
+
+/* Tipografía Honk para títulos */
+.honk-title, .honk-subtitle {
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "MORF" 15, "SHLN" 50;
+}
+
+/* Tipografía Rubik Glitch Pop para párrafos */
+.rubik-glitch-pop-text {
+    font-family: "Rubik Glitch Pop", system-ui;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2.5rem;
+    line-height: 2;
+    color: #eee;
+    margin: 30px 0;
+    text-align: justify;
+}
+
+/* Sección grafiti */
+.grafiti-section {
+    background-color: #000; /* negro intenso */
+    padding: 60px 20px;
+}
+
+.grafiti-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Títulos */
+.honk-title {
+    font-size: 3rem;
+    color: #ff3d00;
+    text-shadow: 2px 2px #000, 4px 4px #ff9e80;
+    margin-bottom: 10px;
+}
+
+.honk-subtitle {
+    font-size: 1.8rem;
+    color: #ffeb3b;
+    text-shadow: 1px 1px #000, 3px 3px #ffc107;
+    margin-bottom: 40px;
+}
+
+/* Imágenes grandes estilo blog */
+.grafiti-image {
+    width: 100%;
+    max-width: 900px;
+    height: 400px;
+    object-fit: cover;
+    margin: 30px 0;
+    border: 4px solid #ff3d00;
+    box-shadow: 0 8px 20px rgba(255, 61, 0, 0.7);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grafiti-image:hover {
+    transform: scale(1.03) rotate(-1deg);
+    box-shadow: 0 12px 30px rgba(255, 61, 0, 0.9);
+}

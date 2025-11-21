@@ -56,8 +56,47 @@
   </header>
 
   <main>
-    <h1>Curso de Programación</h1>
-    <h2>Plan Intermedio</h2>
+    <div class="iframe-wrapper">
+      <iframe 
+        src="https://docs.google.com/presentation/d/e/2PACX-1vQk8VU6_CwxItwVGQ5Anmb_RtkxYemnRNPZXbiMyYp0rlFQmsuEeB9BSmvgC9P6PLe6bETdAFQKsptA/pubembed?start=true&loop=true&delayms=5000"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <hr>
+    <h2>Tras realizar el pago podrás apartar un horario</h2>
+    <h2>Apartarás algún horario disponible de tu preferencia en tu inscripción</h2>
+    <section class="planes-programacion">
+      <h2>🔔 Antes de realizar el pago 🔔</h2>
+      <h2>Asegúrate de cumplir con los siguientes requisitos para tomar el curso:</h2>
+      <p>
+        1. Contar con una computadora con acceso a internet y micrófono.<br>
+        2. Tener una cuenta de Google.<br>
+        3. Elegir un horario disponible para el curso.<br>
+        <br>
+        Además, deberás completar una breve inscripción, la cual debes realizar desde la cuenta de Google que utilizarás durante el curso.
+      </p>
+      <div class="plans-container">
+        <div class="plan advanced">
+          <h3>Plan Intermedio</h3>
+          <p class="price">$2,200 MXN</p>
+          <p class="classes">Incluye 12 clases sincrónicas por dos mil doscientos pesos mexicanos.</p>
+          <p class="description">
+            Para quienes buscan un compromiso mayor con su aprendizaje, el plan intermedio no solo te ofrece 12 clases, 
+            sino que además es más económico por clase que el plan básico. 
+            Con este plan podrás profundizar más en los contenidos, perfeccionar habilidades y aprovechar un aprendizaje más personalizado.
+          </p>
+          <stripe-buy-button
+            buy-button-id="buy_btn_1SVshrE1BnyrswuupFXkUF9U"
+            publishable-key="pk_live_51RMIzdE1BnyrswuuThbm8OocdHxfXtQyZ0QBmXrrDU0PjaB625R93WacRbym3IEdzfqBFcrRpPbZTdMRihGLWd0K00fA9m1BXz"
+          >
+          </stripe-buy-button>
+        </div>
+      </div>
+    </section>
+    <h2>Tu primera clase iniciará el siguiente día correspondiente<br>según el horario disponible que hayas elegido <br> ¡Prepárate para comenzar a programar!</h2>
+    <hr>
+    <a href="clase_prueba.html"><button>Solicita una clase de prueba gratis</button></a>
+    <hr>
   </main>
 
   <footer>
@@ -69,7 +108,7 @@
       <p class="footer-copy">&copy; 2025 IMPY. Todos los derechos reservados.</p>
     </nav>
   </footer>
-
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

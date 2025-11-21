@@ -1,0 +1,134 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo lila para toda la página */
+body {
+    background-color: #decaec; /* lila suave */
+    font-family: 'Gruppo', sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Sección Oasis */
+.oasis-section {
+    padding: 60px 20px;
+    background-color: #e6dbee;
+}
+
+.oasis-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Fuentes */
+.gruppo-regular {
+    font-family: "Gruppo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Títulos y slogans */
+.oasis-title {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.oasis-slogan {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+/* Párrafos */
+.oasis-text, .overlay-text, .panel-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Panel de imagen + texto lateral */
+.oasis-panel {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap; /* adaptable para móviles */
+}
+
+.panel-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel-image img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.panel-text {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .oasis-panel {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .panel-text {
+        text-align: center;
+    }
+}
+
+/* Bloque de imagen horizontal con texto encima */
+.image-text-block {
+    position: relative;
+    margin-top: 40px;
+}
+
+.overlay-text {
+    font-size: 1.3rem;
+    color: #222;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Imagen horizontal grande */
+.oasis-image-horizontal {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.oasis-image-horizontal:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+
+.separador {
+  border: none;
+  height: 0;
+  margin: 40px 0;
+  background: transparent;
+}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # IMPY
 
 **Sitio web:** [impyweb.com](https://impyweb.com)  

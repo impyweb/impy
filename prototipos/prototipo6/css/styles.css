@@ -1,0 +1,90 @@
+/* Fondo de toda la página */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: "Space Grotesk", sans-serif;
+    background: url('https://cdn.pixabay.com/photo/2020/03/08/07/39/violet-4911653_1280.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botón Bienvenido */
+.welcome-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: rgba(255,255,255,0.1);
+    border: 2px solid white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.welcome-btn:hover {
+    background-color: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+}
+
+/* Contenedor principal */
+.main-content {
+    max-width: 800px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+/* Cuando se muestra */
+.main-content.show {
+    opacity: 1;
+}
+
+/* Animación de gradiente para el texto */
+@keyframes rainbow-text {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gradient-text {
+    background: linear-gradient(270deg, #f7aad7, #ffffff, #94f0f0, #ecdaa2, #ce9393);
+    background-size: 1000% 1000%;
+    -webkit-background-clip: text; /* necesario para Chrome/Safari */
+    -webkit-text-fill-color: transparent; /* necesario para Chrome/Safari */
+    background-clip: text; /* estándar */
+    color: transparent; /* fallback */
+    animation: rainbow-text 10s ease infinite;
+}
+
+
+/* Título principal */
+.title {
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Slogan */
+.slogan {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Párrafos */
+.main-content p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 1rem 0;
+}
+
+
