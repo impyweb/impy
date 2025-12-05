@@ -628,7 +628,166 @@ main {
     min-height: 600px;
   }
 }
+/* ==============================
+   CONTACTO - ESTRUCTURA DE SECCIONES
+============================== */
 
+/* Estilos para el contenedor de cada grupo temático (Cursos / Desarrollo Web) */
+.contact-group {
+    /* Separación generosa entre los dos grandes temas */
+    margin: 80px auto; 
+    /* Línea sutil para separar visualmente las secciones */
+    border-top: 1px solid #e5e7eb; 
+    padding-top: 50px;
+}
+
+.contact-group:first-of-type {
+    border-top: none; /* No aplicar línea divisoria al primer grupo */
+    padding-top: 0;
+    margin-top: 20px;
+}
+
+/* Estilos para h2 de las nuevas secciones */
+.contact-group h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1f2937; /* Tono oscuro para el título */
+    font-size: 1.8rem;
+}
+
+/* Estilos para el párrafo descriptivo de la sección */
+.contact-group p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px; /* Margen antes de los íconos */
+    color: #4b5563;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ==============================
+   ESTILOS DE ELEMENTOS INDIVIDUALES
+   (Mantienen la apariencia profesional anterior)
+============================== */
+
+/* --- Contenedor de Íconos (Flexbox) --- */
+.contactos {
+  max-width: 1000px;
+  padding: 0 20px;
+  
+  display: flex;
+  flex-wrap: wrap;
+  /* CAMBIO CLAVE: Usar 'center' para centrar los elementos restantes */
+  justify-content: center; 
+  /* Asegúrate de añadir un margen horizontal automático para centrar el contenedor .contactos en la página */
+  margin-left: auto;
+  margin-right: auto;
+  
+  gap: 30px; 
+}
+
+/* --- Elemento Individual de Contacto (La Card) --- */
+.contacto-item {
+  text-align: center;
+  /* Flex-basis para garantizar 4 en escritorio y buena adaptación */
+  flex: 1 1 180px; 
+  padding: 20px 10px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 220px; 
+}
+
+/* Efecto de Hover Profesional */
+.contacto-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+}
+
+/* --- Estilo del Ícono/Imagen --- */
+.contacto-item img {
+  width: 72px; 
+  height: 72px; 
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f3f4f6; 
+  box-shadow: none; 
+  margin-bottom: 15px; 
+  transition: border-color 0.3s ease;
+}
+
+/* Hover del ícono (cambio de color de borde) */
+.contacto-item:hover img {
+  border-color: #3b82f6; 
+}
+
+/* --- Estilos del Texto --- */
+
+/* Texto de Etiqueta (Título dentro de la tarjeta: WhatsApp, YouTube, Email) */
+.contacto-etiqueta {
+  margin: 0;
+  font-weight: 700; 
+  color: #111827; 
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+/* Texto de Detalle (Número, @usuario, correo) */
+.contacto-detalle {
+  margin: 0;
+  font-weight: 500;
+  color: #4b5563; 
+  font-size: 1rem; 
+  line-height: 1.4;
+  padding-top: 5px;
+
+  /* SOLUCIÓN AL DESBORDAMIENTO DEL EMAIL */
+  overflow-wrap: break-word; 
+  word-break: break-word;
+}
+
+/* --- Estilo de Enlaces --- */
+.contacto-detalle a {
+  color: #3b82f6; 
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 600; 
+}
+
+.contacto-detalle a:hover {
+  text-decoration: underline;
+  color: #1d4ed8; 
+}
+
+/* --- Adaptación para Móviles (Media Query) --- */
+@media (max-width: 600px) {
+  .contactos {
+    gap: 25px;
+  }
+  .contacto-item {
+    flex: 1 1 45%; 
+    max-width: 45%;
+    transform: none !important;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .contact-group {
+      margin: 50px auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .contactos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contacto-item {
+    max-width: 90%;
+    width: 90%;
+  }
+}
 /* ==============================
    FOOTER
 ============================== */
@@ -714,6 +873,11 @@ footer {
 
 /* ==============================
    PREGUNTAS Y RESPUESTAS (FAQ)
+============================== */
+
+
+/* ==============================
+   CONTACTO
 ============================== */
 
 /* ==============================
