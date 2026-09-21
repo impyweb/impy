@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/logo2.png" type="image/png" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Logo del sitio" />
+        </a>
+      </div>
+      <div class="menu">
+        <a href="index.html">
+          <img src="images/casa.png" alt="Ir al inicio" class="home-icon" />
+        </a>
+        <span class="separador">|</span>
+        <a href="sitios.html">Hacemos tu Website</a>
+        <div class="submenu-container">
+          <a href="programacion.html" class="submenu-title">Curso de Programación ▾</a>
+          <div class="submenu">
+            <a href="programacion_basico.html">Plan Básico</a>
+            <a href="programacion_intermedio.html">Plan Intermedio</a>
+            <a href="programacion_intensivo.html">Plan Intensivo</a>
+            <a href="programacion.html">Acerca del Curso</a>
+          </div>
+        </div>
+        <div class="submenu-container">
+          <a href="guitarra.html" class="submenu-title">Curso de Guitarra ▾</a>
+          <div class="submenu">
+            <a href="guitarra_basico.html">Plan Básico</a>
+            <a href="guitarra_intermedio.html">Plan Intermedio</a>
+            <a href="guitarra_intensivo.html">Plan Intensivo</a>
+            <a href="guitarra.html">Acerca del Curso</a>
+          </div>
+        </div>
+        <div class="submenu-container">
+          <a href="piano.html" class="submenu-title">Curso de Piano ▾</a>
+          <div class="submenu">
+            <a href="piano_basico.html">Plan Básico</a>
+            <a href="piano_intermedio.html">Plan Intermedio</a>
+            <a href="piano_intensivo.html">Plan Intensivo</a>
+            <a href="piano.html">Acerca del Curso</a>
+          </div>
+        </div>
+        <a href="acerca.html">Conócenos</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1>I M P Y W E B</h1>
+    <h2>Música y Código: todo en un solo lugar</h2>
+
+    <section class="videos-container">
+      <article class="video-card">
+        <h3>Sesión A</h3>
+        <video controls preload="metadata">
+          <source src="videos/sa.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+      </article>
+
+      <article class="video-card">
+        <h3>Sesión B</h3>
+        <video controls preload="metadata">
+          <source src="videos/sb.mp4" type="video/mp4">
+          Tu navegador no soporta video HTML5.
+        </video>
+      </article>
+    </section>
+
+    <h2 style="text-align:center;">
+      Solicita aquí tu clase de prueba gratuita
+    </h2>
+    <div style="text-align:center; font-size: 24px; animation: bounce 1s infinite;">
+      ↓
+    </div>
+
+    <style>
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+    </style>
+
+    <section id="calendly-booking">
+    <div class="calendly-inline-widget" 
+          data-url="https://calendly.com/depyweboaxaca?hide_landing_page_details=1&hide_gdpr_banner=1" 
+          style="min-width:320px;height:700px;">
+    </div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </section>
+
+    <style>
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+
+      main h1 {
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.4rem;
+      }
+
+      main h2 {
+        margin-bottom: 2rem;
+        font-weight: 400;
+        opacity: 0.9;
+      }
+
+      .videos-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .video-card {
+        width: 100%;
+      }
+
+      .video-card h3 {
+        margin-bottom: 0.8rem;
+        font-size: 1.2rem;
+      }
+
+      .video-card video {
+        width: 100%;
+        display: block;
+        border-radius: 12px;
+        background: #000;
+        box-shadow: 0 4px 20px rgba(0,0,0,.25);
+      }
+
+      @media (max-width: 600px) {
+        .videos-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <script>
+      document.querySelectorAll("video").forEach(video => {
+        video.addEventListener("dblclick", () => {
+          if (document.fullscreenElement) {
+            document.exitFullscreen();
+          } else {
+            video.requestFullscreen();
+          }
+        });
+      });
+    </script>
+  </main>
+
+  <footer>
+    <nav class="footer-nav">
+      <div class="footer-links">
+        <a href="politicas.html">Políticas de Privacidad</a>
+        <a href="terminos.html">Términos de Uso</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 IMPY. Todos los derechos reservados.</p>
+    </nav>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
