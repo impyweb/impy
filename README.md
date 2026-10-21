@@ -30,7 +30,11 @@ impy/
 
 ├── .gitignore
 
+├── CNAME
+
 ├── LICENCE
+
+├── ejecutor.py
 
 ├── README.md
 
@@ -71,9 +75,17 @@ impy/
 
 ├── contacto.html
 
+├── clase_prueba.html
+
 ├── index.html
 
+├── musica_medios.html
+
 ├── politicas.html
+
+├── portafolios.html
+
+├── produccion.html
 
 ├── terminos.html
 
@@ -101,7 +113,13 @@ impy/
 
 ├── programacion_intensivo.html
 
+├── reservas.html
+
 ├── sitios.html
+
+├── talleres.html
+
+├── videos.html
 
 ---
 
