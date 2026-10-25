@@ -10,14 +10,18 @@
 </head>
 <body>
   <header>
-
     <nav class="navbar">
       <div class="logo">
         <a href="index.html">
           <img src="images/logo.png" alt="Logo del sitio" />
         </a>
       </div>
-      <div class="menu">
+      <button class="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-principal">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="menu" id="menu-principal">
         <a href="index.html">
           <img src="images/casa.png" alt="Ir al inicio" class="home-icon" />
         </a>
@@ -64,13 +68,11 @@
           <div class="submenu">
             <a href="acerca.html">Conócenos</a>
             <a href="sitios.html">Hacemos tu Website</a>
-            <a href="portafolios.html">Portafolios</a>
+            
           </div>
         </div>
 
           <a href="contacto.html">Contacto</a>
-
-
       </div>
     </nav>
   </header>

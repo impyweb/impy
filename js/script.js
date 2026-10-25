@@ -14,6 +14,7 @@
    MAIN
 ============================== */
 
+
 document.addEventListener("DOMContentLoaded", function() {
 
   /* ------------------------------
@@ -123,7 +124,26 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+  /* ------------------------------
+     MENÚ HAMBURGUESA
+  ------------------------------ */
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menuPrincipal = document.querySelector('#menu-principal');
+
+  if (menuToggle && menuPrincipal) {
+    menuToggle.addEventListener('click', () => {
+      const abierto = menuPrincipal.classList.toggle('active');
+
+      menuToggle.setAttribute('aria-expanded', abierto);
+      menuToggle.setAttribute(
+        'aria-label',
+        abierto ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'
+      );
+    });
+  }
+
 });
+
 
 /* ==============================
    FOOTER
