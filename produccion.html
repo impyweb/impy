@@ -78,6 +78,40 @@
   </header>
 
   <main>
+    <h1>Producción Musical</h1>
+    <hr>
+
+    <p class="parrafo1">
+      Visualiza el siguiente documento:
+    </p>
+
+    <section class="pdf-reader">
+
+      <div class="pdf-toolbar">
+
+        <button id="pdf-prev">Anterior</button>
+
+        <span id="pdf-page-info">
+          Página 1 de 1
+        </span>
+
+        <button id="pdf-next">Siguiente</button>
+
+        <div class="pdf-zoom">
+          <button id="pdf-zoom-out">−</button>
+          <button id="pdf-zoom-in">+</button>
+        </div>
+
+      </div>
+
+      <div class="pdf-viewer">
+        <canvas id="pdf-canvas"></canvas>
+      </div>
+
+      <p id="pdf-error" class="pdf-error"></p>
+
+    </section>
+
   </main>
 
   <footer>
@@ -91,5 +125,6 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script type="module" src="js/pdf-reader.js"></script>
 </body>
 </html>

@@ -963,6 +963,107 @@ footer {
   }
 }
 
+/* ==============================
+   PDF READER
+============================== */
+
+.pdf-reader {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #f1f2f4;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.pdf-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 15px;
+  background: #252a34;
+  color: white;
+}
+
+.pdf-toolbar button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  background: #414958;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pdf-toolbar button:hover {
+  background: #596579;
+}
+
+.pdf-toolbar button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.pdf-zoom {
+  display: flex;
+  gap: 6px;
+}
+
+#pdf-page-info {
+  font-size: 14px;
+  min-width: 105px;
+  text-align: center;
+}
+
+.pdf-viewer {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+#pdf-canvas {
+  display: block;
+  max-width: none;
+  height: auto;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.pdf-error {
+  color: #b42318;
+  text-align: center;
+  padding: 10px;
+}
+
+/* MÓVILES */
+
+@media (max-width: 600px) {
+
+  .pdf-reader {
+    margin: 25px auto;
+  }
+
+  .pdf-toolbar {
+    gap: 8px;
+    padding: 12px 6px;
+  }
+
+  .pdf-toolbar button {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+
+  .pdf-viewer {
+    padding: 8px;
+  }
+
+}
+
 
 /* ==============================
    RESET / BASE
@@ -1007,4 +1108,9 @@ footer {
 
 /* ==============================
    FOOTER
+============================== */
+
+/* ==============================
+   MENÚ HAMBURGUESA
+   MÓVILES Y TABLETAS
 ============================== */
